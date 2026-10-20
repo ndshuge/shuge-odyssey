@@ -2,7 +2,7 @@
 
 独立的个人主页 V3：以可探索的 Three.js 小星球连接关于我、校园、生活、作品、创意实验与联系方式。本版在 Little Universe 的基础上升级星球场景、光效、镜头和界面。
 
-**新版预定地址**：[ndshuge.github.io/shuge-odyssey](https://ndshuge.github.io/shuge-odyssey/)；正式部署与线上验收尚待确认。
+**新版地址**：[ndshuge.github.io/shuge-odyssey](https://ndshuge.github.io/shuge-odyssey/)。GitHub Pages 已成功部署，线上 8 个关键文件与发布提交一致；实际画面与真机体验仍待验收。
 
 本项目使用独立仓库 `ndshuge/shuge-odyssey`。先前版本继续保留：
 

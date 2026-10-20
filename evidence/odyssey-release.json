@@ -1,0 +1,62 @@
+{
+  "edition": "SHUGE Odyssey V3",
+  "url": "https://ndshuge.github.io/shuge-odyssey/",
+  "repository": "https://github.com/ndshuge/shuge-odyssey",
+  "sourceCommit": "a44e8b779e7a6afd0b5d24e06a04590a8da65f12",
+  "workflow": "https://github.com/ndshuge/shuge-odyssey/actions/runs/39349764176",
+  "workflowStatus": "success",
+  "checkedAt": "2026-10-20T00:48:37.730Z",
+  "passed": 8,
+  "failed": 0,
+  "resources": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "908740d3a96c226bf3926858afa0c9d39c0e68e86be73671b08d740d2d3f1232",
+      "matchesCommit": true
+    },
+    {
+      "file": "town.css",
+      "status": 200,
+      "sha256": "e3eabc365c011013444d7ddb4024de74d3137491a7ed8791873325a5eaadf2e7",
+      "matchesCommit": true
+    },
+    {
+      "file": "town-ui.js",
+      "status": 200,
+      "sha256": "3ed7b2b0a543f867adac6c90eacba0b59d8480303900c128d83db22f312e464d",
+      "matchesCommit": true
+    },
+    {
+      "file": "town.js",
+      "status": 200,
+      "sha256": "96c2fc86e2a6420b1204993171c36a915f5f11d916affc11c9539a32c6a8d7ea",
+      "matchesCommit": true
+    },
+    {
+      "file": "odyssey.js",
+      "status": 200,
+      "sha256": "5bd2ba48ebc25afa35f14350ab01d26990a7d4a64329ec265b97ded2b7b8dda7",
+      "matchesCommit": true
+    },
+    {
+      "file": "planet-model.js",
+      "status": 200,
+      "sha256": "a24266db2b9dc0df3d5aeed46ec7e3c761a031d83e0925103c98fdfea53e5ee6",
+      "matchesCommit": true
+    },
+    {
+      "file": "world-fx.js",
+      "status": 200,
+      "sha256": "0429ab31f2d28abf9f1ae1224a4b36c6bdbdde9e668f2ae68327adf7870c2519",
+      "matchesCommit": true
+    },
+    {
+      "file": "vendor/addons/postprocessing/UnrealBloomPass.js",
+      "status": 200,
+      "sha256": "62f410581c96130cb054399ec7743398c682db4185327fad70ae920f66c3d29e",
+      "matchesCommit": true
+    }
+  ],
+  "limits": "HTTP and artifact identity verified. Actual WebGL/shader appearance, desktop/mobile layout, real touch and frame rate remain unverified."
+}
