@@ -1,1 +1,13 @@
-{"name":"shuge-curious-home","version":"2.0.0","private":true,"type":"module","description":"SHUGE miniature planet — local Three.js, readable HTML and creative experiments","scripts":{"start":"node serve.cjs","check":"node --check dist/town.js && node --check dist/town-ui.js && node --check dist/content.js && node --check dist/app.js","check:scene":"node scripts/check-scene.mjs","check:http":"node scripts/check-static.cjs"}}
+{
+  "name": "shuge-odyssey",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SHUGE Odyssey · 好奇心引力场 — an independent, locally served Three.js personal universe",
+  "scripts": {
+    "start": "node serve.cjs",
+    "check": "node scripts/check-syntax.cjs",
+    "check:scene": "node scripts/check-odyssey.mjs",
+    "check:http": "node scripts/check-static.cjs"
+  }
+}

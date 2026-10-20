@@ -1,0 +1,129 @@
+{
+  "p0": 1,
+  "files": [
+    {
+      "file": "dist/town.html",
+      "findings": [
+        {
+          "id": "missing-stamp",
+          "severity": "P2",
+          "label": "No /* finesse · … */ build stamp — next run has nothing to rotate against",
+          "fix": "divergence §4.2",
+          "hits": [
+            {
+              "line": 0,
+              "text": "no five-axis stamp in CSS"
+            }
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "file": "dist/town.css",
+      "findings": [
+        {
+          "id": "spectacle-not-shown",
+          "severity": "P0",
+          "label": "SPECTACLE 9 claimed but no engine found (three/canvas/gsap/rAF/CSS-timeline)",
+          "fix": "animate / bolder",
+          "hits": [
+            {
+              "line": 3,
+              "text": "claimed SPECTACLE=9"
+            }
+          ],
+          "count": 1
+        },
+        {
+          "id": "default-palette-token",
+          "severity": "P2",
+          "label": "Default-category palette token name (--cream/--sand/--paper…)",
+          "fix": "soul",
+          "count": 2,
+          "hits": [
+            {
+              "line": 8,
+              "text": "--paper"
+            },
+            {
+              "line": 69,
+              "text": "--paper"
+            }
+          ]
+        },
+        {
+          "id": "inline-color-literal",
+          "severity": "P2",
+          "label": "80 opaque colour literals outside :root (>30) — lift them into named tokens",
+          "fix": "soul",
+          "total": 80,
+          "hits": [
+            {
+              "line": 7,
+              "text": "#8d9c8f"
+            },
+            {
+              "line": 7,
+              "text": "#eaece1"
+            },
+            {
+              "line": 8,
+              "text": "#0b1a20"
+            },
+            {
+              "line": 8,
+              "text": "#f2f0e2"
+            },
+            {
+              "line": 8,
+              "text": "#b9c9bf"
+            },
+            {
+              "line": 8,
+              "text": "#eab58f"
+            },
+            {
+              "line": 8,
+              "text": "#a9c6ac"
+            },
+            {
+              "line": 8,
+              "text": "#f0f0e7"
+            }
+          ],
+          "count": 80
+        }
+      ]
+    },
+    {
+      "file": "dist/odyssey.js",
+      "findings": [
+        {
+          "id": "missing-stamp",
+          "severity": "P2",
+          "label": "No /* finesse · … */ build stamp — next run has nothing to rotate against",
+          "fix": "divergence §4.2",
+          "hits": [
+            {
+              "line": 0,
+              "text": "no five-axis stamp in CSS"
+            }
+          ],
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "notCovered": [
+    "default-category aesthetic (the vibe, not just token names — beige+brass craft, AI purple-glow)",
+    "div-based fake screenshots / fake dashboards",
+    "identical / generic card grids (icon + title + text × N)",
+    "zero imagery on an image-implied brief (food / hotel / fashion / travel)",
+    "glassmorphism / AI-purple-glow used as decoration",
+    "layout-family repetition (§5) and whether the soul is actually distinct",
+    "whether the engine RENDERS real pixels (needs the Playwright runtime pass, not a grep)",
+    "mobile-floor M3/M4 — clickable text wrapping to two lines, long-word overflow at 320px (needs a rendered page at 320, not a grep)",
+    "root-relative asset paths (`/img/x.png`) — dead-ref only resolves file-relative ones; a broken `/…` link needs the real serving root"
+  ]
+}

@@ -1,39 +1,17 @@
-# SHUGE Little Universe — status
+# SHUGE Odyssey status
 
-Updated: 2026-10-18
+Updated: 2026-10-20 (Asia/Shanghai).
 
-Goal: publish a separate V2 homepage while preserving the original ChatGPT Sites V1 and original GitHub homepage.
+Goal: publish a more ambitious independent third edition at ndshuge/shuge-odyssey. Baseline: read-only upstream shuge-little-universe bf8a3a7. Old GitHub Pages, GitHub profile and ChatGPT Sites are not deployment targets. Upstream push URL is disabled locally; only new origin is writable.
 
-Source: copied from the Codex checkout `E:\CHATGPT\2026-10-17\b-w\work\curious-home`. Original checkout not edited in this handoff. V1 rollback ZIP: `E:\CHATGPT\2026-10-17\b-w\outputs\curious-home-v1-fc58c1e-rollback.zip`.
+Implemented: pine/porcelain/apricot interface; richer authored architecture with rounded geometry; instanced vegetation and wind; atmosphere, animated water and portal shaders; bloom preserving destination alpha; camera arrival and district targeting; drag inertia with direct held-pointer updates; manual/automatic quality choices. Readable personal pages, exact owner-authorized contacts, all seven works, both creative labs and classic remain.
 
-Verified: V2 is independently deployed at https://ndshuge.github.io/shuge-little-universe/ from the public repository https://github.com/ndshuge/shuge-little-universe . The original V1 login-gated ChatGPT Sites site (https://curious-practice-1017.ndshuge.chatgpt.site), the original Codex checkout and original GitHub homepage were not overwritten. The V2 release includes a V1-style `classic.html` view.
+Validation: syntax passed for 7 owned JS modules; 39 static/local-HTTP checks passed; 14 actual-Three CPU checks with replacement renderer/compositor passed. Geometry: 318 mesh objects, 44,541 unique vertices, 118,070 draw-expanded triangles. This is a construction budget, not measured GPU performance. Reports: evidence/odyssey-preflight.json and odyssey-scene-cpu.json.
 
-Validation results:
-- `npm run check`: syntax passed.
-- `npm run check:scene`: 10/10 CPU Three.js scene checks passed (367 meshes, 42,442 vertices).
-- `npm run check:http`: 25/25 local HTTP and asset checks passed on independent local port 5198.
-- GitHub Pages initial workflow triggered before Pages enablement failed. After Pages enablement, GitHub Actions run https://github.com/ndshuge/shuge-little-universe/actions/runs/39139519338 completed successfully.
-- Remote site HTTP 200 for root, classic.html, town.js and vendor/three.module.js.
-- Real deployed site in Windows Edge headless with Playwright: 19/19 browser checks passed, 0 JavaScript console errors. After WebGL readiness desktop viewport 1440×900 reported 366 draw calls and canvas 1195×900; mobile viewport 390×844 reported 354 draw calls and canvas 390×470. All five destinations worked in both viewports. Evidence: `evidence/live-ready-desktop.png`, `evidence/live-ready-mobile.png`, `evidence/remote-browser-qa.json`.
-- First quick remote screenshot captured a loading spinner; that was cold-loading timing, disproved by wait-for-WebGL test and captured rendered screenshots.
+Independent review: three material findings (bloom alpha, panel focus contrast, inaccurate wheel instruction) fixed in one batch and rescored resolved. Diagnostic properties explicitly refer to the final postprocessing pass. Review disposition covers source fixes only. Finesse's isolated-CSS missing-engine finding was reviewed as a false positive; actual renderer, compositor and animation loop are present. Old design-token warnings refer to V2 documentation, now being updated.
 
-Known limitation: actual physical iPhone/Android device, mobile Safari gestures, battery cost and screen reader use not verified. Mobile-sized Edge viewport is not equivalent to real-device testing.
+Verification limit: current Cua browser bindings repeatedly timed out. No V3 browser screenshot, GPU compilation, desktop/mobile visual approval, real touch or frame-rate evidence has been obtained. Historical V2 evidence is not V3 acceptance. No browser security workaround was used.
 
-Mobile follow-up 2026-10-18 (owner-provided iPhone screenshot):
-- Identified V2 particle regression: simplified 1,000-point line paths replaced V1's 4,200-point sculptural geometry; original shape transitions and perspective were lost, with misleading 'mouse' and 'knot' silhouettes.
-- Root cause of page moving when dragging the planet: `touch-action: pan-y` on both `.scene` and `#particle-canvas` allowed touch-gesture scrolling. Both now use `touch-action: none` while surrounding content-panel scroll remains enabled.
-- V2 restored 4,200 particles, perspective/depth-based alpha and color, and shape morphing; improved trefoil tube and mouse silhouette. Pointer drags, pointer capture, and keyboard rotation now work on the particle sculpture. JS/CSS cache-bust query version `20261018-touchfix` in both HTML entry points.
-- Local validation: syntax pass; CPU planet scene 10/10; static/HTTP 25/25; actual Edge emulated-mobile CDP touch tests 7/7 (planet angle changed while page scrollY stayed 0; particle angle changed while panel scroll stayed 0; normal panel content touch scroll still worked; all three 4,200-point shapes drawn; no JS errors). Evidence `evidence/mobile-regression.json` and `evidence/repair-{ring,knot,mouse}-mobile.png`.
-- Headless Edge mobile touch tests are NOT proof of physical iPhone Safari; owner must verify the published revision on the device.
+Release: new public repository created at https://github.com/ndshuge/shuge-odyssey . Source push and Pages deployment pending.
 
-**Published and remotely verified (2026-10-19).** Commit `79fbd3f1522dddbc3d837596e2e516d3a9c632be` was pushed only to `ndshuge/shuge-little-universe`. GitHub Pages workflow run `39188017631` completed successfully: https://github.com/ndshuge/shuge-little-universe/actions/runs/39188017631 . Live site: https://ndshuge.github.io/shuge-little-universe/ . Post-deployment Windows Edge mobile-touch simulation: 7/7 passes, including independently rotating the planet without scrolling the body, rotating particle sculpture without scrolling the panel, preserving normal panel touch scrolling, and all three 4,200-point shapes. Post-deployment desktop/mobile browser checks: 19/19 passes, working WebGL at both 1440 and 390 CSS-pixel viewports, no JS exceptions. HTTP 200 for homepage and cache-busted assets. Original V1 still unchanged at source commit `fc58c1e`.
-
-**Drag responsiveness follow-up (2026-10-19, user report):**
-- Root causes: horizontal sensitivity 0.006 rad/px vs vertical 0.003; vertical clamp ±0.35 rad caused directions to stop; slow exponential smoothing was still applied during a held finger; visible floating work/hotspot links swallowed touch starts.
-- Implementation: unified touch sensitivity 0.012 rad/px (mouse 0.009), immediate rendering during drag, unbounded vertical and horizontal world rotation, faster easing only outside dragging, pointer-ID-aware capture, hotspot pointer delegation that suppresses click on swipe but retains tap navigation. Scene layering repaired while maintaining decorative overlay appearance. Mobile pixel ratio capped at 1.5 and mobile shadow map reduced to 1024².
-- Assets cache-busted for the new town.js and town.css in both entry pages.
-- Before deployment: static/HTTP 25/25, scene 10/10, previous mobile touch and particle 7/7, full browser 19/19, directional drag feel 11/11 (including hotspot tap and swipe), all in local Edge.
-- Published and verified: independent V2 commit `0763e8d5d84f5145d3421df14e15f409ab424ba0`, Pages deployment https://github.com/ndshuge/shuge-little-universe/actions/runs/39192692979 completed successfully. Remote production URL https://ndshuge.github.io/shuge-little-universe/ passed 11/11 continuous-direction and touch responsiveness tests, including swipe initiated on visible hotspot and tap-to-navigate compatibility. Cache-busted JS/CSS URLs returned HTTP 200. Source of original V1 remains untouched. Latest remote evidence: `evidence/drag-feel-qa.json`.
-- Physical iPhone Safari tactile smoothness is not yet demonstrated; user manual acceptance remains.
-
-Remaining manual acceptance: physical iPhone Safari or embedded in-app browser touch experience; simulated device is not equivalent to testing on the owner's real phone. Future updates should occur only in the independent V2 repository.
+Next action: push reviewed main to new origin, enable GitHub Pages Actions, verify successful run and matching deployed resource hashes, then record release receipt.

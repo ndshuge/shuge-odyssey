@@ -1,0 +1,57 @@
+THREE.JS ADDONS - PINNED LOCAL VENDOR NOTICE
+
+Package: three@0.180.0 (Three.js r180)
+Upstream repository: https://github.com/mrdoob/three.js/tree/r180
+Package metadata: https://registry.npmjs.org/three/0.180.0
+Official npm tarball: https://registry.npmjs.org/three/-/three-0.180.0.tgz
+npm package integrity (verified): sha512-o+qycAMZrh+TsE01GqWUxUIKR1AL0S8pq7zDkYOQw8GqfX8b8VoCKYUoHbhiX5j+7hr8XsuHDVU6+gkQJQKg9w==
+Tarball SHA-256: ad66d724565ee29a2467277fa84daa5ed0211d6b8d446e9ef29f6bae0cd14144
+License: MIT. Full upstream license reproduced below.
+Source mapping: vendor/addons/<path> = package/examples/jsm/<path> in the pinned package.
+Upstream addon source files were copied from the pinned package, then localized as specified below.
+Exact mechanical change: replace from 'three' with from '../../three.module.js' (and the double-quoted equivalent if present).
+Applied 8 replacements in 8 addon files. No other addon source bytes changed; 3 files remain byte-for-byte upstream.
+No runtime CDN or bare module imports remain in the verified import graph.
+All addon modules are two directories below vendor/three.module.js; the relative module path resolves the pinned local renderer.
+Entry points: postprocessing/EffectComposer.js, postprocessing/RenderPass.js, postprocessing/UnrealBloomPass.js, postprocessing/OutputPass.js, geometries/RoundedBoxGeometry.js
+Recursive local import graph verified: 13 files and 21 import/export edges, including vendor/three.module.js and vendor/three.core.js.
+
+VENDORED FILES (ORIGINAL SHA-256 | LOCALIZED SHA-256 | PATH)
+c1b7c9bd2cddff2e3f3a0723f618a3d364a47450e3d25771d21faed88410bec8 | 646b0bbc839c742e43f76023b3832269cea6b649743623b6bb5af6f1a1e512fa | addons/geometries/RoundedBoxGeometry.js
+4b8c855f28eed2570bed898adc0ab89c585a8a281ecb6d905c09d00697f9f50a | a4213fd367dfc6d6962114cca322385b1f350d0fa028c3fcd6519c1df6484fe1 | addons/postprocessing/EffectComposer.js
+7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3 | 7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3 | addons/postprocessing/MaskPass.js
+f5b81c96e76b6b28b4b3ba8c41c4aeb982b1e03f3d82883242d951b2ab082fa2 | 68861f1a93c6d33c02affa49592bba46242d237281c8031ee010d926cc5bb2c0 | addons/postprocessing/OutputPass.js
+444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5 | ac015c53e4a491b4f071535d003e6208ec56e00cfbb74942d93556dd53c45673 | addons/postprocessing/Pass.js
+fd91229aacc5830e3984b0f2bdefcf566163ea028f4c1f1ab233fa6665a133ac | d30f0caa2c781a7a5248f062a6a6b051dd18d6526868be0340d802c1d058dc0b | addons/postprocessing/RenderPass.js
+e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d | 1a07592b97c68fec70b9ece4ee32522878c9e71e8364c10f359480b8cd676ef2 | addons/postprocessing/ShaderPass.js
+d92742959879b461f25348b2abddc7ca0d48527e7718340bcfa29fa771e2799a | 62f410581c96130cb054399ec7743398c682db4185327fad70ae920f66c3d29e | addons/postprocessing/UnrealBloomPass.js
+a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718 | a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718 | addons/shaders/CopyShader.js
+5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e | 123c9d8c4155fa296822eb3325574e82a6c5f4cb30eed065c6cc073ba7ca3bbe | addons/shaders/LuminosityHighPassShader.js
+353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2 | 353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2 | addons/shaders/OutputShader.js
+
+EXISTING RENDERER FILES (UNCHANGED SHA-256)
+9e06b55afc5c845ad8663d0dba7dc8f4e815c218bedae8a9917fac5972e5314f  three.module.js
+7c075bd6b2414b6c4ed4b3416b180df2984051118c2b89965de066ce99307f1c  three.core.js
+
+UPSTREAM LICENSE
+The MIT License
+
+Copyright © 2010-2025 three.js authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

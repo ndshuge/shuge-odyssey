@@ -1,0 +1,164 @@
+{
+  "scope": "Static source and local HTTP preflight; no browser, screenshot, WebGL or interaction acceptance",
+  "date": "2026-10-20T00:47:24.692Z",
+  "passed": 39,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Unique HTML IDs",
+      "pass": true
+    },
+    {
+      "name": "All six readable destinations present",
+      "pass": true
+    },
+    {
+      "name": "No remote runtime dependencies",
+      "pass": true
+    },
+    {
+      "name": "Local entry is the planet edition",
+      "pass": true
+    },
+    {
+      "name": "Original edition preserved",
+      "pass": true
+    },
+    {
+      "name": "Entire local ES module graph resolves without bare/CDN imports",
+      "pass": true
+    },
+    {
+      "name": "Licenses included",
+      "pass": true
+    },
+    {
+      "name": "Only owner-approved mail contacts, no telephone",
+      "pass": true
+    },
+    {
+      "name": "HTTP /",
+      "pass": true
+    },
+    {
+      "name": "HTTP /town.html",
+      "pass": true
+    },
+    {
+      "name": "HTTP /classic.html",
+      "pass": true
+    },
+    {
+      "name": "HTTP /town.css",
+      "pass": true
+    },
+    {
+      "name": "HTTP /town-ui.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /town.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /content.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/three.module.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/three.core.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /fonts/outfit.woff2",
+      "pass": true
+    },
+    {
+      "name": "HTTP /assets/academy.png",
+      "pass": true
+    },
+    {
+      "name": "HTTP /assets/arcade.png",
+      "pass": true
+    },
+    {
+      "name": "HTTP /assets/classnote.png",
+      "pass": true
+    },
+    {
+      "name": "HTTP /assets/galaxy.png",
+      "pass": true
+    },
+    {
+      "name": "HTTP /assets/board.png",
+      "pass": true
+    },
+    {
+      "name": "HTTP /odyssey.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/EffectComposer.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/RenderPass.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/UnrealBloomPass.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/OutputPass.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /planet-model.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /world-fx.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/shaders/CopyShader.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/ShaderPass.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/MaskPass.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/postprocessing/Pass.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/shaders/LuminosityHighPassShader.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/shaders/OutputShader.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /vendor/addons/geometries/RoundedBoxGeometry.js",
+      "pass": true
+    },
+    {
+      "name": "Directory traversal blocked",
+      "pass": true
+    },
+    {
+      "name": "Missing assets return 404",
+      "pass": true
+    }
+  ]
+}

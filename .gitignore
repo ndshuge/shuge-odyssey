@@ -10,6 +10,7 @@ node_modules/
 *.tar.gz
 .DS_Store
 work/
+.finesse/
 evidence/live-github-pages-desktop.png
 evidence/live-warm-desktop.png
 evidence/live-before-*.png

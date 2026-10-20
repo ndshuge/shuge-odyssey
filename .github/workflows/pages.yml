@@ -1,33 +1,67 @@
-name: Publish SHUGE Little Universe
+name: Publish SHUGE Odyssey
+
 on:
   push:
     branches: [main]
+    paths: ['dist/**', 'scripts/**', 'package.json', '.github/workflows/pages.yml', 'serve.cjs']
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: false
+
 jobs:
   publish:
+    if: github.repository == 'ndshuge/shuge-odyssey'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
         with:
           node-version: '22'
+          package-manager-cache: false
+
       - name: Check JavaScript syntax
         run: npm run check
+
       - name: Verify Three.js scene (CPU)
         run: npm run check:scene
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Verify static files over HTTP
+        shell: bash
+        run: |
+          node serve.cjs > "$RUNNER_TEMP/shuge-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..30}; do
+            if curl --fail --silent http://127.0.0.1:5197/ > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl --fail --silent --show-error http://127.0.0.1:5197/ > /dev/null
+          npm run check:http
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload published files only
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
-      - id: deployment
+
+      - name: Deploy GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4

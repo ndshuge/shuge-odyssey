@@ -24,7 +24,7 @@
   window.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#panel').hidden) location.hash = ''; });
   $('#copy-github').addEventListener('click', async () => { try { await navigator.clipboard.writeText('https://github.com/ndshuge'); toast('GitHub 地址已复制'); } catch { toast('地址：https://github.com/ndshuge'); } });
   $$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);toast('联系方式已复制');}catch{toast(b.dataset.copy);}}));
-  const sceneControls=['#ride','#zoom-in','#zoom-out','#reset-view'];let sceneTimer;
+  const sceneControls=['#ride','#zoom-in','#zoom-out','#reset-view','#quality-toggle'];let sceneTimer;
   function sceneState(ready) {clearTimeout(sceneTimer);sceneControls.forEach(s=>$(s).disabled=!ready);$('#scene-loading').hidden=true;$('#render-fallback').hidden=ready;$('.camera-controls').hidden=!ready;$('#ride').hidden=!ready;if(!ready){$('#scene').dataset.ready='fallback';$('#world-caption').textContent='使用导航，直接认识鼠哥。';}}
   sceneControls.forEach(s=>$(s).disabled=true);
   window.addEventListener('shuge:scene-ready',()=>sceneState(true));window.addEventListener('shuge:scene-error',()=>sceneState(false));
