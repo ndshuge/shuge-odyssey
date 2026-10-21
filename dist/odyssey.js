@@ -41,6 +41,8 @@ function boot(){
   let rotation=reduced?.1:-.24,targetRotation=.1,tilt=reduced?-.07:.08,targetTilt=-.07;
   let baseDistance=16.8,distance=reduced?16.8:24,targetDistance=16.8,elapsed=0,last=0;
   let dirty=true,dirtyFrames=0,drag=null,suppressClick=null,velocityX=0,velocityY=0,route='',ride=false,rideStart=0,rideBase=0;
+  let voyageOpen=document.body.dataset.voyage&&document.body.dataset.voyage!=='home';
+  window.addEventListener('shuge:voyage-state',e=>{voyageOpen=e.detail.mode!=='home';if(voyageOpen)setRide(false);dirty=true;});
   let frames=0,totalFrameTime=0,slowFrames=0,autoDowngraded=false;
   const chapters={campus:'校园 · 学习与生长',life:'日常 · 兴趣与远方',work:'创作馆 · 让想法发生',lab:'实验馆 · 好奇心的形状',contact:'联系 · 从这里说声你好',about:'鼠哥 · 一个喜欢造世界的人'};
   const setCaption=text=>{if($('#chapter-caption'))$('#chapter-caption').textContent=text;};
@@ -75,7 +77,7 @@ function boot(){
   const point=new THREE.Vector3(),normal=new THREE.Vector3(),center=new THREE.Vector3(),eye=new THREE.Vector3();
   function labels(){const r=host.getBoundingClientRect(),u=$('#universe').getBoundingClientRect(),panelOpen=document.body.classList.contains('panel-open');world.getWorldPosition(center);eye.copy(camera.position).sub(center).normalize();const occupied=[];for(const a of document.querySelectorAll('[data-hotspot]')){landmarks[a.dataset.hotspot].getWorldPosition(point);normal.copy(point).sub(center).normalize();const front=normal.dot(eye)>.16;point.project(camera);const x=r.left+(point.x+1)*r.width/2,y=r.top+(1-point.y)*r.height/2;const overlap=occupied.some(p=>Math.abs(p.x-x)<115&&Math.abs(p.y-y)<42);const valid=!panelOpen&&front&&!overlap&&x>(innerWidth<761?25:innerWidth*.4)&&x<innerWidth-115&&y>(innerWidth<761?350:125)&&y<innerHeight-(innerWidth<761?130:150);a.classList.toggle('visible',valid);a.inert=!valid;a.setAttribute('aria-hidden',String(!valid));a.style.left=x-u.left+'px';a.style.top=y-u.top+'px';if(valid)occupied.push({x,y});}}
   const tangent=new THREE.Vector3(),radial=new THREE.Vector3(),side=new THREE.Vector3(0,-1,0),basis=new THREE.Matrix4();
-  function frame(now){requestAnimationFrame(frame);if(document.hidden){last=now;return;}const dt=Math.min((now-last)/1000,.05)||0;last=now;
+  function frame(now){requestAnimationFrame(frame);if(document.hidden||voyageOpen){last=now;return;}const dt=Math.min((now-last)/1000,.05)||0;last=now;
     const moving=Math.abs(targetRotation-rotation)+Math.abs(targetTilt-tilt)+Math.abs(targetDistance-distance)>.0006;
     if(paused&&!ride&&!moving&&!dirty&&dirtyFrames<=0)return;dirty=false;if(dirtyFrames>0)dirtyFrames--;
     if(!paused)elapsed+=dt;if(!drag&&!ride&&!paused){targetRotation+=velocityX*dt;targetTilt+=velocityY*dt;velocityX*=Math.exp(-dt*4.7);velocityY*=Math.exp(-dt*4.7);}

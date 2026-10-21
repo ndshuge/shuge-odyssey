@@ -1,5 +1,17 @@
 # SHUGE Odyssey status
 
+## V3.1 Voyage extension — 2026-10-22
+
+Baseline: verified origin/main `18190c288bda0ae7c21666cd09b6c49f6552939c`; this update targets only `ndshuge/shuge-odyssey`. V1, V2 and the GitHub profile remain separate.
+
+Implemented: seven-project 3D orrery with direct/project-list selection; deterministic reef/mineral/halo star workshop; naming, regeneration, local last-star storage, reproducible URL sharing including seed zero, and 1600×1000 PNG illustration download. Existing town, six readable destinations, projects, contacts and both labs remain. New renderer is created on first entry, reused afterwards; inactive worlds skip rendering. Stable pause and hidden-document behavior are covered separately from GPU-performance claims.
+
+Local verification: 11 owned JS syntax checks; 14 original-scene CPU checks; 18 forge CPU checks; 13 voyage CPU checks; 44 static/local-HTTP checks. Independent source/CPU review found no remaining blocking finding in its reviewed snapshot. Design inheritance was documented without replacing the incumbent global system. Browser observations and limits: `evidence/voyage-browser.json`; review: `evidence/voyage-review.md`; surface record: `.impeccable/surfaces/voyage.md`.
+
+Release state: local implementation and review complete; GitHub Pages V3.1 publication pending. The release receipt will be recorded after the workflow and production-file identity checks succeed.
+
+## Previous V3 release record
+
 Updated: 2026-10-20 (Asia/Shanghai).
 
 Goal: publish a more ambitious independent third edition at ndshuge/shuge-odyssey. Baseline: read-only upstream shuge-little-universe bf8a3a7. Old GitHub Pages, GitHub profile and ChatGPT Sites are not deployment targets. Upstream push URL is disabled locally; only new origin is writable.

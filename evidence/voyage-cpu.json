@@ -1,0 +1,20 @@
+{
+  "scope": "CPU-only orrery and mode lifecycle with renderer/DOM stubs; browser pixels and GPU compilation are separate evidence",
+  "passed": 13,
+  "failed": 0,
+  "checks": [
+    "All seven projects have deterministic finite orbital destinations",
+    "Selection clamps to available projects",
+    "Atlas resources detach on disposal",
+    "Second WebGL renderer is lazy: no allocation on homepage",
+    "Entering atlas initializes renderer and protects background focus",
+    "Project controls reach the corresponding orbital selection",
+    "Stable paused voyage stops renderer calls",
+    "Seed zero and requested kind survive UI to model",
+    "Shared homepage pause is respected by new engine",
+    "Resume restarts rendering",
+    "Hidden document stops voyage rendering",
+    "Returning home stops voyage GPU work and restores original controls",
+    "Reopening reuses the owned renderer"
+  ]
+}

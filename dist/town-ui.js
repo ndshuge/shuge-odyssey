@@ -20,6 +20,7 @@
     note();
   }
   window.addEventListener('hashchange', route);
+  window.addEventListener('shuge:reset-route', route);
   $('#panel-close').addEventListener('click', () => location.hash = '');
   window.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#panel').hidden) location.hash = ''; });
   $('#copy-github').addEventListener('click', async () => { try { await navigator.clipboard.writeText('https://github.com/ndshuge'); toast('GitHub 地址已复制'); } catch { toast('地址：https://github.com/ndshuge'); } });

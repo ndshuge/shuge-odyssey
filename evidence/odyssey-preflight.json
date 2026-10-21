@@ -1,7 +1,7 @@
 {
   "scope": "Static source and local HTTP preflight; no browser, screenshot, WebGL or interaction acceptance",
-  "date": "2026-10-20T00:47:24.692Z",
-  "passed": 39,
+  "date": "2026-10-21T02:04:30.353Z",
+  "passed": 44,
   "failed": 0,
   "results": [
     {
@@ -53,6 +53,10 @@
       "pass": true
     },
     {
+      "name": "HTTP /voyage.css",
+      "pass": true
+    },
+    {
       "name": "HTTP /town-ui.js",
       "pass": true
     },
@@ -97,7 +101,27 @@
       "pass": true
     },
     {
+      "name": "HTTP /voyage.js",
+      "pass": true
+    },
+    {
       "name": "HTTP /odyssey.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /world-fx.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /voyage-model.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /star-forge.js",
+      "pass": true
+    },
+    {
+      "name": "HTTP /voyage-ui.js",
       "pass": true
     },
     {
@@ -118,10 +142,6 @@
     },
     {
       "name": "HTTP /planet-model.js",
-      "pass": true
-    },
-    {
-      "name": "HTTP /world-fx.js",
       "pass": true
     },
     {

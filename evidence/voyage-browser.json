@@ -1,0 +1,26 @@
+{
+  "edition": "SHUGE Odyssey 3.1 / Voyage",
+  "observedDate": "2026-10-21",
+  "recordedDate": "2026-10-22",
+  "target": "http://127.0.0.1:5238/",
+  "method": "In-app browser via Cua; native controls, read-only DOM geometry, runtime datasets, captured console messages and browser download",
+  "observations": [
+    {"check":"Existing town and additional entry are reachable", "result":"pass"},
+    {"check":"Atlas boots a real WebGL renderer", "result":"pass", "observed":{"ready":"true","drawCalls":43,"triangles":24688}},
+    {"check":"Projected planet label selects the corresponding project and real links", "result":"pass", "observed":"Selected 鼠哥学院 using its scene label; title, pressed project choice and live/source URLs updated"},
+    {"check":"All three star families render without captured shader errors", "result":"pass", "observed":{"reefTriangles":3920,"mineralTriangles":708,"haloTriangles":4096,"capturedErrors":0}},
+    {"check":"Name field, kind buttons and pause control respond", "result":"pass", "observed":"Name and pressed states updated; paused dataset true, renderer frame counter remained 9333 at the later read"},
+    {"check":"Postcard actually downloads", "result":"pass", "observed":"1600x1000 PNG downloaded through the browser; opened locally and inspected as the generated halo illustration"},
+    {"check":"Copy produces reproducible star URL", "result":"pass", "observed":"Clipboard matched seed=20261021, kind=halo and the entered title"},
+    {"check":"Shared seed zero restores forge and clears hash-route state", "result":"pass", "observed":"Opened ?seed=0&kind=reef&star=零号星#contact; seed 0, reef and the exact title restored; close returned to working town navigation"},
+    {"check":"Browser Back from open Voyage restores contact page", "result":"pass", "observed":{"hash":"#contact","voyage":"home","panelHidden":false,"contactHidden":false}},
+    {"check":"Desktop label and entry positioning after fixes", "result":"pass", "observed":{"viewport":"1280x720","entryBottom":575.16,"districtNavTop":641,"visibleProjectedLabels":7}},
+    {"check":"Responsive DOM layout has no horizontal document overflow", "result":"pass", "viewports":["1280x720","768x720","390x844","320x640"], "limits":"Bounds and visibility only; not a pixel or physical-touch assessment. Short-screen scene inset and narrow-close min-width were adjusted after the first bounds pass and reviewed in source."}
+  ],
+  "limits": [
+    "Both screenshot APIs reported Unable to capture screenshot; no page screenshot or aesthetic approval is claimed",
+    "No measured FPS, real mobile device, hardware touch, virtual keyboard, display-cutout or screen-reader acceptance",
+    "Recorded observations apply to the local implementation; production publication and artifact hashes are separate evidence",
+    "The PNG is a seed-generated illustration, not a screenshot of the 3D webpage"
+  ]
+}

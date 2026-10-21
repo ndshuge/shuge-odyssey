@@ -39,6 +39,11 @@ jobs:
       - name: Verify Three.js scene (CPU)
         run: npm run check:scene
 
+      - name: Verify seeded worlds and navigation lifecycle (CPU)
+        run: |
+          npm run check:forge
+          npm run check:voyage
+
       - name: Verify static files over HTTP
         shell: bash
         run: |

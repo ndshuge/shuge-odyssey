@@ -1,0 +1,34 @@
+{
+  "p0": 0,
+  "files": [
+    {
+      "file": "dist/voyage.css",
+      "findings": [
+        {
+          "id": "missing-stamp",
+          "severity": "P2",
+          "label": "No /* finesse · … */ build stamp — next run has nothing to rotate against",
+          "fix": "divergence §4.2",
+          "hits": [
+            {
+              "line": 0,
+              "text": "no five-axis stamp in CSS"
+            }
+          ],
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "notCovered": [
+    "default-category aesthetic (the vibe, not just token names — beige+brass craft, AI purple-glow)",
+    "div-based fake screenshots / fake dashboards",
+    "identical / generic card grids (icon + title + text × N)",
+    "zero imagery on an image-implied brief (food / hotel / fashion / travel)",
+    "glassmorphism / AI-purple-glow used as decoration",
+    "layout-family repetition (§5) and whether the soul is actually distinct",
+    "whether the engine RENDERS real pixels (needs the Playwright runtime pass, not a grep)",
+    "mobile-floor M3/M4 — clickable text wrapping to two lines, long-word overflow at 320px (needs a rendered page at 320, not a grep)",
+    "root-relative asset paths (`/img/x.png`) — dead-ref only resolves file-relative ones; a broken `/…` link needs the real serving root"
+  ]
+}
