@@ -1,0 +1,98 @@
+{
+  "edition": "SHUGE Odyssey V3.1 / Voyage",
+  "url": "https://ndshuge.github.io/shuge-odyssey/",
+  "repository": "https://github.com/ndshuge/shuge-odyssey",
+  "sourceCommit": "fd5aad9b9e87abdceeb045152154fa496e8b457b",
+  "workflow": "https://github.com/ndshuge/shuge-odyssey/actions/runs/39696451625",
+  "workflowStatus": "success",
+  "checkedAt": "2026-10-21T23:55:36.064Z",
+  "passed": 14,
+  "failed": 0,
+  "resources": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "sha256": "d9fc7ac6d739cc626c1cc8f561f5bae51ba5baa91411c1555c9c9b34eca1492b",
+      "matchesCommit": true
+    },
+    {
+      "file": "town.html",
+      "status": 200,
+      "sha256": "d9fc7ac6d739cc626c1cc8f561f5bae51ba5baa91411c1555c9c9b34eca1492b",
+      "matchesCommit": true
+    },
+    {
+      "file": "town.css",
+      "status": 200,
+      "sha256": "e3eabc365c011013444d7ddb4024de74d3137491a7ed8791873325a5eaadf2e7",
+      "matchesCommit": true
+    },
+    {
+      "file": "town-ui.js",
+      "status": 200,
+      "sha256": "e35c898ed49f7787156f620ad53a0d9d0052aee91603a9fa9296607ef2647780",
+      "matchesCommit": true
+    },
+    {
+      "file": "town.js",
+      "status": 200,
+      "sha256": "96c2fc86e2a6420b1204993171c36a915f5f11d916affc11c9539a32c6a8d7ea",
+      "matchesCommit": true
+    },
+    {
+      "file": "odyssey.js",
+      "status": 200,
+      "sha256": "ec78f31e2d7451d20889eba4ea1e1b592ea8200fd806ee7f033672721b9877dd",
+      "matchesCommit": true
+    },
+    {
+      "file": "planet-model.js",
+      "status": 200,
+      "sha256": "a24266db2b9dc0df3d5aeed46ec7e3c761a031d83e0925103c98fdfea53e5ee6",
+      "matchesCommit": true
+    },
+    {
+      "file": "world-fx.js",
+      "status": 200,
+      "sha256": "0429ab31f2d28abf9f1ae1224a4b36c6bdbdde9e668f2ae68327adf7870c2519",
+      "matchesCommit": true
+    },
+    {
+      "file": "voyage.js",
+      "status": 200,
+      "sha256": "0f35b9682c1546143f54fb623ce746f5bb7aa699cd6b63c4050cd549c7e4cb46",
+      "matchesCommit": true
+    },
+    {
+      "file": "voyage.css",
+      "status": 200,
+      "sha256": "e8d9f69cfad5bce78afc17fc8852ab0c7bd62c4f4d27a0e50c520616f366871b",
+      "matchesCommit": true
+    },
+    {
+      "file": "voyage-ui.js",
+      "status": 200,
+      "sha256": "3af039acabcf3442d27a2ebb1e7846c48d5aee3c5daf99ba0d81b1e63ad757c4",
+      "matchesCommit": true
+    },
+    {
+      "file": "voyage-model.js",
+      "status": 200,
+      "sha256": "56847ae26e444c5e1b420982e6062860a3eb96f0af464a73bfae7edf44a92d4d",
+      "matchesCommit": true
+    },
+    {
+      "file": "star-forge.js",
+      "status": 200,
+      "sha256": "f7909f71f0a2ee33c4780e9f2e1348a2f1fc34e82a906ad00d4db20c8eb8e7c1",
+      "matchesCommit": true
+    },
+    {
+      "file": "content.js",
+      "status": 200,
+      "sha256": "f099863e589c421f1edaf268252315eafd92984656cd218e012bd1cf684776ee",
+      "matchesCommit": true
+    }
+  ],
+  "limits": "This receipt proves HTTP delivery and exact artifact identity. Local browser WebGL, controls, download and DOM bounds are separately recorded in voyage-browser.json. Page screenshots, physical mobile interaction and measured frame rate remain unavailable."
+}

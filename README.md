@@ -4,6 +4,8 @@
 
 **网站地址**：[ndshuge.github.io/shuge-odyssey](https://ndshuge.github.io/shuge-odyssey/)。首页点击「打开奇想宇宙」，即可进入作品星图和造星工坊。最新发布凭据与验证范围见 [STATUS.md](STATUS.md)。
 
+V3.1 已部署；[GitHub Actions](https://github.com/ndshuge/shuge-odyssey/actions/runs/39696451625) 自动检查全部通过，线上 14 个关键资源与发布提交一致。
+
 生成过程在设备上完成；最后一颗星存于本浏览器的 localStorage。分享链接包含星球的名字、形态和种子，复制后可以发给别人。1600×1000 PNG 为同种子生成的纪念插画，与可旋转的 3D 场景分别绘制。
 
 本项目使用独立仓库 `ndshuge/shuge-odyssey`。先前版本继续保留：

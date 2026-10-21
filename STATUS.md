@@ -8,7 +8,9 @@ Implemented: seven-project 3D orrery with direct/project-list selection; determi
 
 Local verification: 11 owned JS syntax checks; 14 original-scene CPU checks; 18 forge CPU checks; 13 voyage CPU checks; 44 static/local-HTTP checks. Independent source/CPU review found no remaining blocking finding in its reviewed snapshot. Design inheritance was documented without replacing the incumbent global system. Browser observations and limits: `evidence/voyage-browser.json`; review: `evidence/voyage-review.md`; surface record: `.impeccable/surfaces/voyage.md`.
 
-Release state: local implementation and review complete; GitHub Pages V3.1 publication pending. The release receipt will be recorded after the workflow and production-file identity checks succeed.
+Release state: V3.1 successfully deployed at https://ndshuge.github.io/shuge-odyssey/ from source commit `fd5aad9b9e87abdceeb045152154fa496e8b457b`. GitHub Actions run `39696451625` completed successfully, including all CPU/static checks and the Pages deployment. All 14 checked production resources returned HTTP 200 and matched their exact committed Git blobs. Receipt: `evidence/voyage-release.json`. Upstream V2 main remains `bf8a3a78921599799f172a42d4b5704b07d48963`.
+
+Production browser opening on 2026-10-22 timed out; the earlier local browser observations remain the runtime evidence. No production screenshot or physical-device performance claim is made. Screenshots, actual phone touch/keyboard and measured frame rate are the remaining acceptance limits.
 
 ## Previous V3 release record
 
